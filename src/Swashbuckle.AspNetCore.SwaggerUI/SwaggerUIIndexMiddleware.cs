@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 
-namespace Swashbuckle.AspNetCore.SwaggerUI3
+namespace Swashbuckle.AspNetCore.SwaggerUI
 {
     public class SwaggerUIIndexMiddleware
     {

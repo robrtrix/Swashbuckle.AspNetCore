@@ -1,6 +1,6 @@
 ﻿using System.Text;
 using Newtonsoft.Json.Linq;
-using Swashbuckle.AspNetCore.SwaggerUI3;
+using Swashbuckle.AspNetCore.SwaggerUI;
 
 namespace Microsoft.AspNetCore.Builder
 {

@@ -103,25 +103,10 @@ namespace SwaggerUI3
                 resourceServer.UseMvc();
 
                 resourceServer.UseSwagger();
-                resourceServer.UseSwaggerUI3(c =>
+                resourceServer.UseSwaggerUI(c =>
                 {
-                    // Core
                     c.SwaggerEndpoint("/resource-server/swagger/v1/swagger.json", "V1");
-
-                    // Display
-                    c.DefaultModelExpandDepth(2);
-                    c.DefaultModelRendering(ModelRendering.Model);
-                    c.DefaultModelsExpandDepth(-1);
-                    c.DisplayOperationId();
-                    c.DisplayRequestDuration();
-                    c.DocExpansion(DocExpansion.None);
-                    c.EnableDeepLinking();
-                    c.EnableFilter();
-                    c.ShowExtensions();
-
-                    // Network
-                    c.OAuth2RedirectUrl("http://localhost:60891/resource-server/swagger/oauth2-redirect.html");
-                    c.ValidatorUrl(null);
+                    c.ConfigureOAuth2("swagger-ui", null, null, "Swagger UI");
                 });
             });
         }

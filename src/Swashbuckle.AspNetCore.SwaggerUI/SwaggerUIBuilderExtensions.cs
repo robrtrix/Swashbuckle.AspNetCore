@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Reflection;
 using Microsoft.Extensions.FileProviders;
-using Swashbuckle.AspNetCore.SwaggerUI3;
+using Swashbuckle.AspNetCore.SwaggerUI;
 
 namespace Microsoft.AspNetCore.Builder
 {
     public static class SwaggerUIBuilderExtensions
     {
-        private const string EmbeddedFilesNamespace = "Swashbuckle.AspNetCore.SwaggerUI3.bower_components.swagger_ui.dist";
+        private const string EmbeddedFilesNamespace = "Swashbuckle.AspNetCore.SwaggerUI.bower_components.swagger_ui.dist";
 
-        public static IApplicationBuilder UseSwaggerUI3(
+        public static IApplicationBuilder UseSwaggerUI(
             this IApplicationBuilder app,
             Action<SwaggerUIOptions> setupAction)
         {

@@ -16,7 +16,7 @@ namespace SwaggerUI3.AuthServer
                 ClientId = "swagger-ui",
                 ClientName = "Swagger UI",
                 ClientSecrets = new[] { new Secret("swagger-ui-secret".Sha256()) },
-                RedirectUris = new[] { "http://localhost:60891/resource-server/swagger/oauth2-redirect.html" }
+                RedirectUris = new[] { "http://localhost:60891/resource-server/swagger/o2c.html" }
             };
         }
 

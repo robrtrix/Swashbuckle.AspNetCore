@@ -27,14 +27,27 @@ namespace CustomUIConfig
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "V1 Docs");
-                c.EnabledValidator();
-                c.BooleanValues(new object[] { 0, 1 });
-                c.DocExpansion("full");
-                c.SupportedSubmitMethods(new[] { "get", "post", "put", "patch" });
-                c.InjectOnCompleteJavaScript("/ext/custom-script.js");
+                // Index
+                c.DocumentTitle = "Custom API - Swagger UI";
                 c.InjectStylesheet("/ext/custom-stylesheet.css");
-                c.DocumentTitle("Custom API - Swagger UI");
+
+                // Core
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "V1 Docs");
+
+                // Display
+                c.DefaultModelExpandDepth(2);
+                c.DefaultModelRendering(ModelRendering.Model);
+                c.DefaultModelsExpandDepth(-1);
+                c.DisplayOperationId();
+                c.DisplayRequestDuration();
+                c.DocExpansion(DocExpansion.None);
+                c.EnableDeepLinking();
+                c.EnableFilter();
+                c.ShowExtensions();
+
+                // Network
+                c.ValidatorUrl(null);
+
             });
         }
     }

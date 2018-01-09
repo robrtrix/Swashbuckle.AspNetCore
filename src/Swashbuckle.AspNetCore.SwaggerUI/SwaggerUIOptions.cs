@@ -3,7 +3,7 @@ using System.IO;
 using System.Reflection;
 using Newtonsoft.Json.Linq;
 
-namespace Swashbuckle.AspNetCore.SwaggerUI3
+namespace Swashbuckle.AspNetCore.SwaggerUI
 {
     public class SwaggerUIOptions
     {
